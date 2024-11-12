@@ -42,12 +42,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(height: 16),
                 _buildTextField('Enter Your Email'),
                 const SizedBox(height: 16),
+                _buildTextField('Education Level (e.g., Bachelor’s, Master’s)'),
+                const SizedBox(height: 16),
+                _buildTextField('Years of Experience in Tech'),
+                    const SizedBox(height: 16),
+                    _buildTextField('Top Technical Skills (e.g., Python, Java)'),
+                    const SizedBox(height: 16),
+                    _buildTextField('Mentorship or Networking Involvement'),
+                    const SizedBox(height: 16),
+                    _buildTextField('Company Supportive Environment (e.g., Very Supportive)'),
+                    const SizedBox(height: 32.0),
                 
                 const SizedBox(height: 32.0),
                 ElevatedButton(
                   onPressed: (){},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepPurple[50],
+                    backgroundColor: Colors.pink,
                     foregroundColor: Theme.of(context).primaryColor,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     elevation: 0,

@@ -16,7 +16,7 @@ class WelcomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                'SheTech',
+                'Tech Journey',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -32,7 +32,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Text(
-                'Better way to learning\nis calling you!',
+                'Empowering Women in Tech\nUnlock Your Success Potential!',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -41,7 +41,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               const Text(
-                'Welcome to SheTech, where women in tech\nconnect, learn, and thrive',
+                'Welcome to Tech Journey, where we predict your success rate in the tech industry',
                 style: TextStyle(fontSize: 16),
                 textAlign: TextAlign.center,
               ),
