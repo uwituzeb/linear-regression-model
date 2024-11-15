@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'prediction_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -55,7 +56,33 @@ class _HomeScreenState extends State<HomeScreen> {
                 
                 const SizedBox(height: 32.0),
                 ElevatedButton(
-                  onPressed: (){},
+                  onPressed: () async{
+                    try{
+                      final inputData = {
+                        'name': _nameController.text,
+                        'email': _emailController.text,
+                        'education_level': _educationLevelController.text,
+                        'experience': _experienceController.text,
+                        'technical_skills': _technicalSkillsController.text,
+                        'mentorship': _mentorshipController.text,
+                        'company_supportive_environment': _companySupportiveEnvironmentController.text,
+                      }
+                      double prediction = await PredictionService.predictSuccessRate(inputData);
+                      showDialog(context: context, builder: (_) => AlertDialog(
+                        title: Text("Prediction result"),
+                        content: Text("Your success rate is ${prediction.toStringAsPercentage(accuracy: 2)}"),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Text('OK'),
+                          ),
+                        ]
+                    }catch (error) {
+
+                    }
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.pink,
                     foregroundColor: Theme.of(context).primaryColor,
