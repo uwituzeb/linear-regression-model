@@ -55,6 +55,7 @@ dev_dependencies:
 flutter:
   assets:
   - images/img.jpg
+  - images/result.jpg
   fonts:
 
   - family: Outfit

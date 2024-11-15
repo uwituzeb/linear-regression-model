@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'My App',
       theme: ThemeData(
-        primaryColor: Colors.pink,
+        primaryColor: const Color(0xFF006D6F),
         fontFamily: 'Outfit',
       ),
       initialRoute: '/welcome',

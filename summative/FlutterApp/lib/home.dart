@@ -9,6 +9,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final _jobTitleController = TextEditingController();
+final _genderController = TextEditingController();
+final _ageController = TextEditingController();
+final _perfEvalController = TextEditingController();
+final _educationController = TextEditingController();
+final _deptController = TextEditingController();
+final _seniorityController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     Color primaryColor = Theme.of(context).primaryColor;
@@ -24,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Predict your success rate',
+                  'Predict your salary',
                   style: TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
@@ -34,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Fill out the fields below',
+                  'Provide your background information to get a Salary insight',
                   style: TextStyle(color: Colors.grey),
                   
                 ),
@@ -43,48 +50,53 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(height: 16),
                 _buildTextField('Enter Your Email'),
                 const SizedBox(height: 16),
-                _buildTextField('Education Level (e.g., Bachelor’s, Master’s)'),
+                _buildTextField('Age'),
                 const SizedBox(height: 16),
-                _buildTextField('Years of Experience in Tech'),
-                    const SizedBox(height: 16),
-                    _buildTextField('Top Technical Skills (e.g., Python, Java)'),
-                    const SizedBox(height: 16),
-                    _buildTextField('Mentorship or Networking Involvement'),
-                    const SizedBox(height: 16),
-                    _buildTextField('Company Supportive Environment (e.g., Very Supportive)'),
-                    const SizedBox(height: 32.0),
+                _buildTextField('Gender'),
+                const SizedBox(height: 16),
+                _buildTextField('Education Level (High School/College/Masters/PhD)'),
+                const SizedBox(height: 16),
+                _buildTextField('Job Title'),
+                const SizedBox(height: 16),
+                _buildTextField('Department'),
+                const SizedBox(height: 16),
+                _buildTextField('Seniority (Years)'),
+                const SizedBox(height: 16),
+                _buildTextField('Performance Evaluation (1-5)'),
+                const SizedBox(height: 16),   
+
                 
                 const SizedBox(height: 32.0),
                 ElevatedButton(
                   onPressed: () async{
                     try{
                       final inputData = {
-                        'name': _nameController.text,
-                        'email': _emailController.text,
-                        'education_level': _educationLevelController.text,
-                        'experience': _experienceController.text,
-                        'technical_skills': _technicalSkillsController.text,
-                        'mentorship': _mentorshipController.text,
-                        'company_supportive_environment': _companySupportiveEnvironmentController.text,
-                      }
+                        'job_title': _jobTitleController.text,
+                        'gender': _genderController.text,
+                        'age': int.parse(_ageController.text),
+                        'dept': _deptController.text,
+                        'education': _educationController.text,
+                        'perf_eval':int.parse(_perfEvalController.text),
+                        'seniority': int.parse(_seniorityController.text),
+                      };
                       double prediction = await PredictionService.predictSuccessRate(inputData);
-                      showDialog(context: context, builder: (_) => AlertDialog(
-                        title: Text("Prediction result"),
-                        content: Text("Your success rate is ${prediction.toStringAsPercentage(accuracy: 2)}"),
-                        actions: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            child: Text('OK'),
-                          ),
-                        ]
+                      // showDialog(context: context, builder: (_) => AlertDialog(
+                      //   title: Text("Prediction result"),
+                      //   content: Text("Your success rate is ${prediction.toStringAsPercentage(accuracy: 2)}"),
+                      //   actions: [
+                      //     TextButton(
+                      //       onPressed: () {
+                      //         Navigator.pop(context);
+                      //       },
+                      //       child: Text('OK'),
+                      //     ),
+                      //   ]
                     }catch (error) {
 
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.pink,
+                    backgroundColor: const Color(0xFF006D6F),
                     foregroundColor: Theme.of(context).primaryColor,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     elevation: 0,

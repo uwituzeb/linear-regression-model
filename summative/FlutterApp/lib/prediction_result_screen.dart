@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+class ResultScreen extends StatefulWidget {
+  const ResultScreen({super.key});
 
+  @override
+  State<ResultScreen> createState() => _ResultScreenState();
+}
+
+class _ResultScreenState extends State<ResultScreen> {
   @override
   Widget build(BuildContext context) {
     Color primaryColor = Theme.of(context).primaryColor;
@@ -25,14 +30,14 @@ class WelcomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Image.asset(
-                'images/img.jpg',
+                'images/result.jpg',
                 width: 250,
                 height: 250,
                 fit: BoxFit.contain,
               ),
               const SizedBox(height: 20),
               const Text(
-                'Know Your Worth,\nClaim Your Value!',
+                'Your predicted salary is\n 75,000]\$ per Year',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -41,7 +46,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               const Text(
-                'Welcome to PayPredict, where our aim is to promote pay transparency and equity',
+                'Thank you for using PayPredict',
                 style: TextStyle(fontSize: 16),
                 textAlign: TextAlign.center,
               ),
