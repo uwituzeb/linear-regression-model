@@ -26,6 +26,7 @@ final _seniorityController = TextEditingController();
           child: Padding(
             padding: const EdgeInsets.all(32.0),
             child: Form(
+              key: _formKey,
               child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -63,7 +64,6 @@ final _seniorityController = TextEditingController();
                 _buildTextField('Seniority (Years)'),
                 const SizedBox(height: 16),
                 _buildTextField('Performance Evaluation (1-5)'),
-                const SizedBox(height: 16),   
 
                 
                 const SizedBox(height: 32.0),
