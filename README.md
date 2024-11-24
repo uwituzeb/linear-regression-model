@@ -9,10 +9,15 @@ PayPredict aligns with my mission at ALU which is a combination of job creation 
 
 ## Dataset
 
-To create the linear regression model for the salary prediction API, (dataset)[https://www.kaggle.com/datasets/nilimajauhari/glassdoor-analyze-gender-pay-gap] was used, sourced from the Kaggle platform. The dataset taken from glassdoor, contains the base pay for different job roles which makes it a perfect fit for the model necessary for salary prediction. The dataset contains about 9000 columns of data with detailed employee attributes/features i.e Job title, Education level, Years of Experience, Performance Evaluation, Age, Gender, Department, Seniority and Bonus, with a targeted variable of salary or base pay.
+To create the linear regression model for the salary prediction API, [dataset](https://www.kaggle.com/datasets/nilimajauhari/glassdoor-analyze-gender-pay-gap) was used, sourced from the Kaggle platform. The dataset taken from glassdoor, contains the base pay for different job roles which makes it a perfect fit for the model necessary for salary prediction. The dataset contains about 9000 columns of data with detailed employee attributes/features i.e Job title, Education level, Years of Experience, Performance Evaluation, Age, Gender, Department, Seniority and Bonus, with a targeted variable of salary or base pay.
 
 The dataset is included in this repository as well as the notebook where the model is created.
-(Google colab)[https://colab.research.google.com/drive/1VKI2AnDxjmTp6aaUqlwcOI5pb1xNjaOP?usp=sharing]
+[Google colab](https://colab.research.google.com/drive/1VKI2AnDxjmTp6aaUqlwcOI5pb1xNjaOP?usp=sharing)
+
+## API Documentation
+
+Navigate to [docs](https://linear-regression-model-m7ix.onrender.com/docs) to try out the API through Swagger Docs. 
+NB: Due to it being a free service, may take longer to load.
 
 ## Features
 
@@ -77,10 +82,6 @@ Request Body:
 }
 ```
 
-## API Documentation
-
-Navigate to (docs)[https://linear-regression-model-m7ix.onrender.com/docs] to try out the API through Swagger Docs. 
-NB: Due to it being a free service, may take longer to load.
 
 ## Navigation
 
