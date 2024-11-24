@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:model_frontend/prediction_service.dart';
+import 'package:intl/intl.dart';
 
 class ResultScreen extends StatefulWidget {
   const ResultScreen({super.key});
@@ -10,6 +12,8 @@ class ResultScreen extends StatefulWidget {
 class _ResultScreenState extends State<ResultScreen> {
   @override
   Widget build(BuildContext context) {
+    final prediction = ModalRoute.of(context)!.settings.arguments as PredictionResponse;
+    final currencyFormatter = NumberFormat.currency(symbol: '\$', decimalDigits: 2);
     Color primaryColor = Theme.of(context).primaryColor;
 
     return Scaffold(
@@ -36,9 +40,9 @@ class _ResultScreenState extends State<ResultScreen> {
                 fit: BoxFit.contain,
               ),
               const SizedBox(height: 20),
-              const Text(
-                'Your predicted salary is\n 75,000]\$ per Year',
-                style: TextStyle(
+              Text(
+                'Your predicted salary is\n${prediction.data.predictedSalary.toStringAsFixed(2)}\$ per Year',
+                style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -63,7 +67,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     ),
                   ),
                   child: const Text(
-                    'Start predicting',
+                    'Make Another Prediction',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,),
                   ),
                 ),

@@ -24,7 +24,23 @@ class PredictionInput {
     required this.perfEval,
     required this.seniority,
     required this.bonus,
-  });
+  }) {
+    if(name.length < 2 || name.length > 50){
+      throw ArgumentError('Name must be between 2 and 50 characters');
+    }
+    if (age <= 18 || age >= 100) {
+      throw ArgumentError('Age must be between 18 and 100');
+    }
+    if (perfEval < 0 || perfEval > 5) {
+      throw ArgumentError('Performance evaluation must be between 0 and 5');
+    }
+    if (seniority < 0) {
+      throw ArgumentError('Seniority cannot be negative');
+    }
+    if (bonus < 0) {
+      throw ArgumentError('Bonus cannot be negative');
+    }
+  }
 
   Map<String, dynamic> toJson() => {
     'name': name,
@@ -51,6 +67,7 @@ class PredictionResponse {
   });
 
   factory PredictionResponse.fromJson(Map<String, dynamic> json) {
+    
     return PredictionResponse(
       status: json['status'],
       data: PredictionData.fromJson(json['data']),
@@ -70,6 +87,11 @@ class PredictionData {
   });
 
   factory PredictionData.fromJson(Map<String, dynamic> json) {
+    if (!json.containsKey('name') || 
+        !json.containsKey('email') || 
+        !json.containsKey('predicted_salary')) {
+      throw const FormatException('Invalid data format: missing required fields');
+    }
     return PredictionData(
       name: json['name'],
       email: json['email'],
@@ -79,7 +101,7 @@ class PredictionData {
 }
 
 class PredictionService {
-  static const String baseUrl = 'http://localhost:8000';
+  static const String baseUrl = 'http://10.0.2.2:8000';
 
   static Future<PredictionResponse> predictSalary(PredictionInput input) async{
     final url = Uri.parse('$baseUrl/predict');
