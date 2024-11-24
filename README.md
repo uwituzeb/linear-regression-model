@@ -2,11 +2,17 @@
 
 ## Overview
 
-PayPredict is a flutter based mobile application that uses machine learning to predict salaries based on various employee attributes. Using a trained model, the app provides salary estimates according to the employee information such as job title, education, experience, and performance. The app promotes fair compensation, career development, and informed decision-making in the job market hence promoting Job Creation in terms of Decent Work and Quality Education.
+PayPredict is a flutter-based mobile application that uses machine learning to predict salaries based on various employee attributes. Using a trained model, the app provides salary estimates according to the employee information such as job title, education, experience, and performance. The app promotes fair compensation, career development, and informed decision-making in the job market hence contributing to Job Creation in terms of decent work and educational empowerment.
+
+## Mission
+PayPredict aligns with my mission at ALU which is a combination of job creation and education by offering tools that enhance career development and empower employees to make informed decisions. The app provides data-driven insights into salary trends, enabling fair compensation, fostering career development and promoting job creation. PayPredict also aims to bridge the gap between education and employment by providing insights into the value of skills and qualifications in the job market.
 
 ## Dataset
 
-To create the linear regression model for the salary prediction API, (dataset)[https://www.kaggle.com/datasets/nilimajauhari/glassdoor-analyze-gender-pay-gap] was used, sourced from the Kaggle platform. The dataset taken from glassdoor, contains the base pay for different job roles which makes it a perfect fit for the model necessary for salary prediction. The dataset contains about 9000 columns of data
+To create the linear regression model for the salary prediction API, (dataset)[https://www.kaggle.com/datasets/nilimajauhari/glassdoor-analyze-gender-pay-gap] was used, sourced from the Kaggle platform. The dataset taken from glassdoor, contains the base pay for different job roles which makes it a perfect fit for the model necessary for salary prediction. The dataset contains about 9000 columns of data with detailed employee attributes/features i.e Job title, Education level, Years of Experience, Performance Evaluation, Age, Gender, Department, Seniority and Bonus, with a targeted variable of salary or base pay.
+
+The dataset is included in this repository as well as the notebook where the model is created.
+(Google colab)[https://colab.research.google.com/drive/1VKI2AnDxjmTp6aaUqlwcOI5pb1xNjaOP?usp=sharing]
 
 ## Features
 
@@ -25,11 +31,10 @@ To create the linear regression model for the salary prediction API, (dataset)[h
 ### Installation
 
 1. Clone the repository
+
 ```
 git clone https://github.com/uwituzeb/linear-regression-model.git
-
 cd linear-regression-model/summative/FlutterApp
-
 ```
 
 2. Install dependencies
@@ -72,11 +77,14 @@ Request Body:
 }
 ```
 
+## API Documentation
+
+Navigate to (docs)[https://linear-regression-model-m7ix.onrender.com/docs] to try out the API through Swagger Docs. 
+NB: Due to it being a free service, may take longer to load.
+
 ## Navigation
 
 - The welcome screen(initial route) introduces the app and welcomes users with more information about the application
-
 - The Home Screen is where the user will enter their data into a form and from there they can submit their information by clicking the `predict` button
-
 - The Results Screen displays the results that came from the prediction
 
