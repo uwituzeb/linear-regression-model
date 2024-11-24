@@ -7,6 +7,9 @@ PayPredict is a flutter-based mobile application that uses machine learning to p
 ## Mission
 PayPredict aligns with my mission at ALU which is a combination of job creation and education by offering tools that enhance career development and empower employees to make informed decisions. The app provides data-driven insights into salary trends, enabling fair compensation, fostering career development and promoting job creation. PayPredict also aims to bridge the gap between education and employment by providing insights into the value of skills and qualifications in the job market.
 
+## Video Demo
+To see how the app works live use this [PayApi demo link](https://www.youtube.com/watch?v=taqXp1NbmFE)
+
 ## Dataset
 
 To create the random forest regressor model for the salary prediction API, [dataset](https://www.kaggle.com/datasets/nilimajauhari/glassdoor-analyze-gender-pay-gap) was used, sourced from the Kaggle platform. The dataset taken from glassdoor, contains the base pay for different job roles which makes it a perfect fit for the model necessary for salary prediction. The dataset contains about 9000 columns of data with detailed employee attributes/features i.e Job title, Education level, Years of Experience, Performance Evaluation, Age, Gender, Department, Seniority and Bonus, with a targeted variable of salary or base pay.
