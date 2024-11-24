@@ -10,6 +10,9 @@ PayPredict aligns with my mission at ALU which is a combination of job creation 
 ## Video Demo
 To see how the app works live use this [PayApi demo link](https://www.youtube.com/watch?v=taqXp1NbmFE)
 
+## Prototype
+To see the figma design use this [PayApi prototype](https://www.figma.com/proto/v34i62dFQ8NVfEwQ3qTKGL/Linear-Regression-Model?node-id=1-5&t=fiwIcp3CiudFMdbn-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
+
 ## Dataset
 
 To create the random forest regressor model for the salary prediction API, [dataset](https://www.kaggle.com/datasets/nilimajauhari/glassdoor-analyze-gender-pay-gap) was used, sourced from the Kaggle platform. The dataset taken from glassdoor, contains the base pay for different job roles which makes it a perfect fit for the model necessary for salary prediction. The dataset contains about 9000 columns of data with detailed employee attributes/features i.e Job title, Education level, Years of Experience, Performance Evaluation, Age, Gender, Department, Seniority and Bonus, with a targeted variable of salary or base pay.
