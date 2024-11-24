@@ -101,7 +101,7 @@ class PredictionData {
 }
 
 class PredictionService {
-  static const String baseUrl = 'http://10.0.2.2:8000';
+  static const String baseUrl = 'https://linear-regression-model-m7ix.onrender.com/';
 
   static Future<PredictionResponse> predictSalary(PredictionInput input) async{
     final url = Uri.parse('$baseUrl/predict');
