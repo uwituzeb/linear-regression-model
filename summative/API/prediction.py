@@ -13,7 +13,7 @@ import os
 app = FastAPI(
     title="Salary Prediction API",
     description="""
-A linear regression model that predicts salaries based on employee information.
+A Random Forest Regressor model that predicts salaries based on employee information.
 
 ## Features
 * Predicts salaries using a linear regression model
