@@ -4,6 +4,10 @@
 
 PayPredict is a flutter based mobile application that uses machine learning to predict salaries based on various employee attributes. Using a trained model, the app provides salary estimates according to the employee information such as job title, education, experience, and performance. The app promotes fair compensation, career development, and informed decision-making in the job market hence promoting Job Creation in terms of Decent Work and Quality Education.
 
+## Dataset
+
+To create the linear regression model for the salary prediction API, (dataset)[https://www.kaggle.com/datasets/nilimajauhari/glassdoor-analyze-gender-pay-gap] was used, sourced from the Kaggle platform. The dataset taken from glassdoor, contains the base pay for different job roles which makes it a perfect fit for the model necessary for salary prediction. The dataset contains about 9000 columns of data
+
 ## Features
 
 - Uses a trained linear regression model for accurate salary estimates
