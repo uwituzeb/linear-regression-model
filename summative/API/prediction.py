@@ -35,7 +35,7 @@ app.add_middleware(
 )
 
 try:
-    BASE_DIR = Path(__file__).resolve().parent.parent
+    BASE_DIR = Path(__file__).resolve().parent
     MODEL_DIR = BASE_DIR / "linear_regression"
     
     model = joblib.load( MODEL_DIR / 'best_salary_model.pkl')
