@@ -8,6 +8,7 @@ import joblib
 from fastapi.middleware.cors import CORSMiddleware
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
+import os
 
 app = FastAPI(
     title="Salary Prediction API",
@@ -138,4 +139,5 @@ async def predict(input_data: PredictionInput):
 
     
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000)) 
     uvicorn.run(app, host="0.0.0.0", port=8000)
