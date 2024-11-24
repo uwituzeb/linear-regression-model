@@ -12,17 +12,18 @@ import pandas as pd
 app = FastAPI(
     title="Salary Prediction API",
     description="""
-        A linear regression model that predicts salaries based on employee information.
+A linear regression model that predicts salaries based on employee information.
 
-        ### Features
-        * Predicts salaries using a linear regression model
-        * Support for multiple job roles and departments
-        
-        ### Usage
-        Make POST request to `/predict` endpoint with employee information to get salary predictions
+## Features
+* Predicts salaries using a linear regression model
+* Support for multiple job roles and departments
+
+## Usage
+Make POST request to `/predict` endpoint with employee information to get salary predictions
     """,
     version="1.0.0",
     docs_url="/docs",
+    openapi_url="/openapi.json"
 )
 
 # CORS configuration
